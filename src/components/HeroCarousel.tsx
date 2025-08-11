@@ -65,7 +65,7 @@ export const HeroCarousel = () => {
             
             {/* Call to action */}
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button className="academic-gradient px-8 py-3 text-lg font-semibold elegant-hover">
+              <Button className="academic-gradient px-8 py-3 text-lg font-semibold elegant-hover" onClick={() => navigate('/virtual-learning')}>
                 <Play className="w-5 h-5 mr-2" />
                 Take Virtual Tour
               </Button>

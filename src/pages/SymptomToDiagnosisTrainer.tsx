@@ -1,11 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ArrowLeft, Brain, Target, CheckCircle, XCircle, Clock } from 'lucide-react';
+import { useLocation } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
+import mixpanel from "./mixpanel";
 
 const SymptomToDiagnosisTrainer = () => {
+
+    const location = useLocation();
+
+  useEffect(() => {
+    const fullUrl = window.location.href;
+
+    mixpanel.track("Page Viewed", {
+      full_url: fullUrl,
+      path: location.pathname,
+      title: document.title,
+      timestamp: new Date().toISOString(),
+    });
+  }, [location.pathname]);
+
+ 
+  const { toast } = useToast();
+
   const navigate = useNavigate();
   const [currentCase, setCurrentCase] = useState<any>(null);
   const [selectedDiagnosis, setSelectedDiagnosis] = useState('');

@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
-import { 
-  ArrowLeft, 
-  Users, 
-  Play, 
-  BookOpen, 
-  Calendar, 
+import {
+  ArrowLeft,
+  Users,
+  Play,
+  BookOpen,
+  Calendar,
   Clock,
   CheckCircle2,
   BarChart
@@ -32,7 +32,7 @@ interface Module {
 const VirtualLearning = () => {
   const navigate = useNavigate();
   const [selectedTab, setSelectedTab] = useState('all');
-  
+
   // Sample module data
   const modules: Module[] = [
     {
@@ -115,14 +115,35 @@ const VirtualLearning = () => {
     }
   ];
 
-  const filteredModules = selectedTab === 'all' 
-    ? modules 
+  const filteredModules = selectedTab === 'all'
+    ? modules
     : modules.filter(module => module.category.toLowerCase() === selectedTab.toLowerCase());
 
   const handleEnroll = (moduleId: string) => {
+    if (moduleId === 'mod-001') {
+      navigate('/advanced-cardiac-anatomy');
+    }
+    else if (moduleId === "mod-002"){
+      navigate("/neural-network-diagnosis")
+    }
+     else if (moduleId === "mod-003"){
+      navigate("/antimicrobial-pharmacology")
+    }
+    else if (moduleId === "mod-004"){
+      navigate("/medical-imaging-interpretation")
+    }
+    else if (moduleId === "mod-005"){
+      navigate("/surgical-techniques-vr")
+    }
+     else if (moduleId === "mod-006"){
+      navigate("/molecular-mechanisms")
+    }
+    else {
+      navigate(`/virtual-learning/module/${moduleId}`);
+    }
     // In a real app, this would call an API to enroll the student
-    console.log(`Enrolled in module: ${moduleId}`);
-    navigate(`/virtual-learning/module/${moduleId}`);
+    // console.log(`Enrolled in module: ${moduleId}`);
+
   };
 
   return (
@@ -146,7 +167,7 @@ const VirtualLearning = () => {
         {/* Back Button */}
         <div className="mb-6">
           <Button
-            onClick={() => navigate('/ai-enhanced-learning')}
+            onClick={() => navigate(-1)}
             variant="outline"
             className="flex items-center gap-2 hover:bg-primary hover:text-white transition-colors"
           >
@@ -204,10 +225,10 @@ const VirtualLearning = () => {
                       </div>
                     </CardDescription>
                   </CardHeader>
-                  
+
                   <CardContent>
                     <p className="text-sm text-muted-foreground mb-4">{module.description}</p>
-                    
+
                     <div className="space-y-3 mb-4">
                       <div className="flex items-center text-xs">
                         <Clock className="h-3 w-3 mr-2 text-medical-primary" />
@@ -218,7 +239,7 @@ const VirtualLearning = () => {
                         <span>Schedule: {module.schedule}</span>
                       </div>
                     </div>
-                    
+
                     <div className="mb-4">
                       <h4 className="text-xs font-semibold mb-2">Topics Covered:</h4>
                       <div className="flex flex-wrap gap-1">
@@ -229,8 +250,8 @@ const VirtualLearning = () => {
                         ))}
                       </div>
                     </div>
-                    
-                    <Button 
+
+                    <Button
                       onClick={() => handleEnroll(module.id)}
                       className="w-full bg-gradient-to-r from-medical-primary to-medical-secondary text-white hover:from-medical-primary/90 hover:to-medical-secondary/90"
                     >
@@ -247,7 +268,7 @@ const VirtualLearning = () => {
         {/* Dashboard Summary */}
         <div className="mt-12 bg-muted rounded-lg p-6">
           <h2 className="text-xl font-bold mb-6 text-medical-primary">Your Learning Dashboard</h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             <div className="bg-white rounded-lg p-4 shadow-sm">
               <div className="flex items-center gap-3">
@@ -260,7 +281,7 @@ const VirtualLearning = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-white rounded-lg p-4 shadow-sm">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-full bg-medical-secondary/20 flex items-center justify-center">
@@ -272,7 +293,7 @@ const VirtualLearning = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-white rounded-lg p-4 shadow-sm">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-full bg-campus-gold/20 flex items-center justify-center">
@@ -285,7 +306,7 @@ const VirtualLearning = () => {
               </div>
             </div>
           </div>
-          
+
           <p className="text-center text-sm text-muted-foreground">
             Enroll in a module to start tracking your progress and earning certificates.
           </p>

@@ -66,10 +66,10 @@ export const Header = () => {
               >
                 Admissions
               </button>
-              <a href="#research" className="text-white/90 hover:text-ai-accent transition-colors font-medium">
+              <a href="/ai-research-paper-assistant" className="text-white/90 hover:text-ai-accent transition-colors font-medium">
                 Research
               </a>
-              <a href="#campus" className="text-white/90 hover:text-ai-accent transition-colors font-medium">
+              <a href="/campus-stats" className="text-white/90 hover:text-ai-accent transition-colors font-medium">
                 Campus Life
               </a>
             </nav>

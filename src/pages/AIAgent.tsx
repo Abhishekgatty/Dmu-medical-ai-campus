@@ -71,7 +71,7 @@ const AIAgent = () => {
         {/* Back Button */}
         <div className="mb-6">
           <Button
-            onClick={() => navigate('/ai-enhanced-learning')}
+            onClick={() => navigate(-1)}
             variant="outline"
             className="flex items-center gap-2 hover:bg-primary hover:text-white transition-colors"
           >

@@ -1,12 +1,27 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState,useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { ArrowLeft, Brain, User, MessageCircle, Stethoscope, Activity } from 'lucide-react';
+import mixpanel from "./mixpanel";
 
 const AIVirtualPatientSimulator = () => {
+
+     const location = useLocation();
+  
+    useEffect(() => {
+      const fullUrl = window.location.href;
+  
+      mixpanel.track("Page Viewed", {
+        full_url: fullUrl,
+        path: location.pathname,
+        title: document.title,
+        timestamp: new Date().toISOString(),
+      });
+    }, [location.pathname]);
+
   const navigate = useNavigate();
   const [selectedPatient, setSelectedPatient] = useState<any>(null);
   const [conversation, setConversation] = useState<any[]>([]);

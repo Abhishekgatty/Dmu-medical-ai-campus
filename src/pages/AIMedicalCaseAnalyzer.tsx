@@ -1,12 +1,27 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
 import { ArrowLeft, Brain, FileText, Lightbulb, AlertCircle } from 'lucide-react';
+import mixpanel from "./mixpanel";
 
 const AIMedicalCaseAnalyzer = () => {
+
+ const location = useLocation();
+
+  useEffect(() => {
+    const fullUrl = window.location.href;
+
+    mixpanel.track("Page Viewed", {
+      full_url: fullUrl,
+      path: location.pathname,
+      title: document.title,
+      timestamp: new Date().toISOString(),
+    });
+  }, [location.pathname]);
+
   const navigate = useNavigate();
   const [caseText, setCaseText] = useState('');
   const [analysis, setAnalysis] = useState<any>(null);
