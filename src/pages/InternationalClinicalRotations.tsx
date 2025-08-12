@@ -24,6 +24,7 @@ import {
   FileText,
   Stethoscope
 } from 'lucide-react';
+import { HeaderNew } from '@/components/HeaderNew';
 
 interface ClinicalRotationCenter {
   id: string;
@@ -288,8 +289,8 @@ Best regards,
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20">
-      {/* Header */}
-      <div className="bg-gradient-to-r from-medical-primary/10 to-medical-secondary/10 py-16">
+      <HeaderNew />
+      <div className="bg-gradient-to-r from-medical-primary/10 to-medical-secondary/10 py-16 mt-[81px]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold mb-4 flex items-center justify-center gap-3">

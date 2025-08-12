@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ArrowLeft, Heart, Info, Volume2, RotateCcw } from 'lucide-react';
 import * as THREE from 'three';
+import { HeaderNew } from '@/components/HeaderNew';
 
 // 3D Heart Component
 const Heart3D = ({ onPartClick }: { onPartClick: (part: string) => void }) => {
@@ -125,7 +126,8 @@ const AdvancedCardiacAnatomy = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20 p-6">
-      <div className="max-w-6xl mx-auto">
+     <HeaderNew  />
+      <div className="max-w-6xl mx-auto mt-[100px]">
         <div className="flex items-center gap-4 mb-8">
           <Button 
             variant="ghost" 

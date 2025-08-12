@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { ArrowLeft, Brain, Zap, Upload, Download, Play, Pause } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { HeaderNew } from '@/components/HeaderNew';
 
 const NeuralNetworkDiagnosisModule = () => {
   const navigate = useNavigate();
@@ -76,7 +77,8 @@ const NeuralNetworkDiagnosisModule = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20 p-6">
-      <div className="max-w-6xl mx-auto">
+      <HeaderNew />
+      <div className="max-w-6xl mx-auto mt-[100px]">
         <div className="flex items-center gap-4 mb-8">
           <Button 
             variant="ghost" 

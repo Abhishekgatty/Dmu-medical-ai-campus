@@ -6,6 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
 import { ArrowLeft, Brain, FileText, Lightbulb, AlertCircle } from 'lucide-react';
 import mixpanel from "./mixpanel";
+import { HeaderNew } from '@/components/HeaderNew';
 
 const AIMedicalCaseAnalyzer = () => {
 
@@ -83,7 +84,8 @@ const AIMedicalCaseAnalyzer = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20 p-6">
-      <div className="max-w-6xl mx-auto">
+      <HeaderNew />
+      <div className="max-w-6xl mx-auto mt-[100px]">
         <div className="flex items-center gap-4 mb-8">
           <Button 
             variant="ghost" 

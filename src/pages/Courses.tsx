@@ -18,6 +18,7 @@ import {
   Globe,
   ArrowLeft
 } from 'lucide-react';
+import { HeaderNew } from '@/components/HeaderNew';
 
 interface Course {
   id: string;
@@ -233,8 +234,8 @@ const Courses = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20">
-      {/* Header */}
-      <div className="bg-gradient-to-r from-primary/10 to-secondary/10 py-16">
+      <HeaderNew />
+      <div className="bg-gradient-to-r from-primary/10 to-secondary/10 py-16 mt-[81px]">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold mb-4 flex items-center justify-center gap-3">
             <GraduationCap className="h-10 w-10" />

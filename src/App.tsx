@@ -97,27 +97,27 @@ const App = () => (
             <Route path="/student-academic-dashboard" element={<ProtectedRoute><StudentAcademicDashboard /></ProtectedRoute>} />
             <Route path="/ai-research-paper-assistant" element={<ProtectedRoute><AIResearchPaperAssistant /></ProtectedRoute>} />
             <Route path="/campus-stats" element={<ProtectedRoute><CampusStats /></ProtectedRoute>} />
-          <Route path="/student-portal-features" element={<ProtectedRoute><StudentPortalFeatures /></ProtectedRoute>} />
+            <Route path="/student-portal-features" element={<ProtectedRoute><StudentPortalFeatures /></ProtectedRoute>} />
             <Route path="/study-group-network" element={<ProtectedRoute><StudyGroupNetwork /></ProtectedRoute>} />
-            
-              <Route path="/symptom-to-diagnosis" element={<ProtectedRoute><SymptomToDiagnosisTrainer /></ProtectedRoute>} /><Route path="/student-resource-hub" element={<ProtectedRoute><StudentResourceHub /></ProtectedRoute>} />
-   <Route path="/drug-interaction-ai-explainer" element={<ProtectedRoute><DrugInteractionAIExplainer /></ProtectedRoute>} />
-    <Route path="/ai-virtual-patient-simulator" element={<ProtectedRoute><AIVirtualPatientSimulator /></ProtectedRoute>} />
-  <Route path="/clinical-case-analyzer" element={<ProtectedRoute><AIMedicalCaseAnalyzer /></ProtectedRoute>} />
 
- <Route path="/neural-network-diagnosis" element={<ProtectedRoute><NeuralNetworkDiagnosisModule /></ProtectedRoute>} />
-  <Route path="/advanced-cardiac-anatomy" element={<ProtectedRoute><AdvancedCardiacAnatomy /></ProtectedRoute>} />
-
-            
-         
+            <Route path="/symptom-to-diagnosis" element={<ProtectedRoute><SymptomToDiagnosisTrainer /></ProtectedRoute>} /><Route path="/student-resource-hub" element={<ProtectedRoute><StudentResourceHub /></ProtectedRoute>} />
+            <Route path="/drug-interaction-ai-explainer" element={<ProtectedRoute><DrugInteractionAIExplainer /></ProtectedRoute>} />
+            <Route path="/ai-virtual-patient-simulator" element={<ProtectedRoute><AIVirtualPatientSimulator /></ProtectedRoute>} />
             <Route path="/clinical-case-analyzer" element={<ProtectedRoute><AIMedicalCaseAnalyzer /></ProtectedRoute>} />
-           
+
+            <Route path="/neural-network-diagnosis" element={<ProtectedRoute><NeuralNetworkDiagnosisModule /></ProtectedRoute>} />
+            <Route path="/advanced-cardiac-anatomy" element={<ProtectedRoute><AdvancedCardiacAnatomy /></ProtectedRoute>} />
+
+
+
+            <Route path="/clinical-case-analyzer" element={<ProtectedRoute><AIMedicalCaseAnalyzer /></ProtectedRoute>} />
+
 
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="/antimicrobial-pharmacology" element={<AntimicrobialPharmacology />} />
             <Route path="/medical-imaging-interpretation" element={<MedicalImagingInterpretationPage />} />
-              <Route path="/surgical-techniques-vr" element={<SurgicalTechniquesVRPage />} />
-                   <Route path="/molecular-mechanisms" element={<MolecularMechanismsPage />} />
+            <Route path="/surgical-techniques-vr" element={<SurgicalTechniquesVRPage />} />
+            <Route path="/molecular-mechanisms" element={<MolecularMechanismsPage />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>

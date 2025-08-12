@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ArrowLeft, Brain, MessageSquare } from 'lucide-react';
+import { HeaderNew } from '@/components/HeaderNew';
 
 const PharmacologyAntimicrobialsPage = () => {
   const navigate = useNavigate();
@@ -59,7 +60,8 @@ const PharmacologyAntimicrobialsPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20 p-6">
-      <div className="max-w-4xl mx-auto space-y-6">
+      <HeaderNew />
+      <div className="max-w-4xl mx-auto space-y-6 mt-[100px]">
         {/* Back Button */}
         <Button variant="ghost" onClick={() => navigate(-1)} className="flex items-center gap-2">
           <ArrowLeft className="h-4 w-4" /> Back

@@ -3,14 +3,15 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Bot, Headphones, Users, ExternalLink, Sparkles, Brain, BookOpen } from 'lucide-react';
+import { HeaderNew } from '@/components/HeaderNew';
 
 const AIEnhancedLearning = () => {
   const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20">
-      {/* Header */}
-      <div className="bg-gradient-to-r from-ai-accent/20 to-neural-purple/20 py-16">
+     <HeaderNew/>
+      <div className="bg-gradient-to-r from-ai-accent/20 to-neural-purple/20 py-16 mt-[81px]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold mb-4 flex items-center justify-center gap-3">

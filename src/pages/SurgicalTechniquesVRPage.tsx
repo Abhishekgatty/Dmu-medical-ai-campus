@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Play, Target, Loader2, Stethoscope } from 'lucide-react';
+import { HeaderNew } from '@/components/HeaderNew';
 
 const SurgicalTechniquesVRPage = () => {
   const navigate = useNavigate();
@@ -68,7 +69,8 @@ const SurgicalTechniquesVRPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-secondary/10 p-6">
-      <div className="max-w-5xl mx-auto space-y-6">
+      <HeaderNew />
+      <div className="max-w-5xl mx-auto space-y-6 mt-[100px]">
         {/* Back Button */}
         <Button variant="ghost" onClick={() => navigate(-1)} className="flex items-center gap-2">
           <ArrowLeft className="h-4 w-4" /> Back

@@ -7,6 +7,7 @@ import { ArrowLeft, Brain, Target, CheckCircle, XCircle, Clock } from 'lucide-re
 import { useLocation } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import mixpanel from "./mixpanel";
+import { HeaderNew } from '@/components/HeaderNew';
 
 const SymptomToDiagnosisTrainer = () => {
 
@@ -170,7 +171,8 @@ const SymptomToDiagnosisTrainer = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20 p-6">
-      <div className="max-w-6xl mx-auto">
+      <HeaderNew />
+      <div className="max-w-6xl mx-auto mt-[100px]">
         <div className="flex items-center gap-4 mb-8">
           <Button 
             variant="ghost" 

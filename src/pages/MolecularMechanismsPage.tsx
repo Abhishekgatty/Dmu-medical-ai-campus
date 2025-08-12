@@ -51,7 +51,7 @@ const MolecularMechanismsPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-secondary/10 p-6">
         <HeaderNew/>
-      <div className="max-w-5xl mx-auto space-y-6">
+      <div className="max-w-5xl mx-auto space-y-6 mt-[100px]">
         
         {/* Back */}
         <Button variant="ghost" onClick={() => navigate(-1)} className="flex items-center gap-2">
